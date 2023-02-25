@@ -1,0 +1,13 @@
+@import "../../styles/settings.scss";
+
+.cardForm {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+@media (max-width: 767px) {
+    .cardForm {
+        flex-wrap: wrap;
+    }
+}
