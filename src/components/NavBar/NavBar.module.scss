@@ -1,0 +1,35 @@
+@import '../../styles/settings.scss';
+
+ul, li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+.container {
+    margin-top: 0;
+}
+
+.navigation {
+    background: darken($color-dark, 3%); 
+    margin-top: -20px;
+}
+
+.navigationRow{
+   display: flex;
+    justify-content: space-between; 
+}
+.navigationIcon {
+    font-size: 24px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+}
+.navigationList{
+display: flex;
+}
+.navigationListItem {
+    color: white;
+    margin-left: 24px;
+}
