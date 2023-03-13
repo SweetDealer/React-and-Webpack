@@ -6,11 +6,12 @@ import initialState from './initialState';
 export const getFilteredCards = ({ cards, searchString }, columnId) => cards
     .filter(card => card.columnId === columnId && card.title.toLowerCase().includes(searchString.toLowerCase()));
 export const getAllColumns = (state => state.columns);
+export const getListById = ({ lists }, listId) => lists.find(list => list.id === listId);
 
 // action creators
 export const addColumn = payload => ({ type: 'ADD_COLUMN', payload });
 export const addCard = payload => ({ type: 'ADD_CARD', payload });
-export const useSearch = payload => ({ type: 'USE_SEARCH', payload });
+export const search = payload => ({ type: 'START_SEARCH', payload });
 
 const reducer = (state, action) => {
     switch (action.type) {
@@ -18,7 +19,7 @@ const reducer = (state, action) => {
             return { ...state, columns: [...state.columns, action.payload] };
         case 'ADD_CARD':
             return { ...state, cards: [...state.cards, action.payload] };
-        case 'USE_SEARCH':
+        case 'START_SEARCH':
             return { ...state, searchString: action.payload };
         default:
             return state;

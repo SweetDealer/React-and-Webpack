@@ -29,7 +29,12 @@ a {
 .navigationList{
 display: flex;
 }
-.navigationListItem {
+.navigationListItem > a {
     color: white;
     margin-left: 24px;
+    font-weight: 700;
+}
+
+.navigationListItem .linkActive {
+    color: $color-warning;
 }
