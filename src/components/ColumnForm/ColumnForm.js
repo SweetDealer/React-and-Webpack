@@ -6,17 +6,18 @@ import { useDispatch } from 'react-redux';
 import shortid from 'shortid';
 import { addColumn } from '../../redux/store';
 
-const ColumnForm = () => {
+const ColumnForm = props => {
     const [title, setTitle] = useState('');
     const [icon, setIcon] = useState('');
     const dispatch = useDispatch();
     
     const handleSubmit = e => {
         e.preventDefault();
-        dispatch(addColumn({ title, icon, id: shortid() }));
+        dispatch(addColumn({ title, icon, id: shortid(), listId: props.listId}));
         setTitle('');
         setIcon('');
     }
+
     return (
         <form onSubmit={handleSubmit} className={styles.columnForm}>
             Title: <TextInput type="text" value={title} onChange={e => setTitle(e.target.value)} />
