@@ -11,3 +11,11 @@
     justify-content: space-between;
     font-weight: bold;
 }
+
+.icon {
+    cursor: pointer;
+}
+
+.isFavorite .icon {
+color: $color-warning;
+}
