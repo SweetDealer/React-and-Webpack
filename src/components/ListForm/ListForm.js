@@ -3,7 +3,6 @@ import { useState } from 'react';
 import Button from '../Button/Button';
 import TextInput from '../TextInput/TextInput';
 import { useDispatch } from 'react-redux';
-import shortid from 'shortid';
 import { addList } from '../../redux/store';
 
 const ListForm = () => {
@@ -13,7 +12,7 @@ const ListForm = () => {
 
     const handleSubmit = e => {
         e.preventDefault();
-        dispatch(addList({ title, description, id: shortid() }));
+        dispatch(addList({ title, description }));
         setTitle('');
         setDescription('');
     }
