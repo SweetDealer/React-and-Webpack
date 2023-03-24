@@ -1,5 +1,5 @@
 // actions
-const createActionName = actionName => `app/lists/${actionName}`;
+const createActionName = actionName => `app/Searsh/${actionName}`;
 const START_SEARCH = createActionName('START_SEARCH');
 
 // action creators

@@ -6,7 +6,7 @@ export const getFilteredCards = ({ cards, searchString }, columnId) => cards
     .filter(card => card.columnId === columnId && card.title.toLowerCase().includes(searchString.toLowerCase()));
 
 // actions
-const createActionName = actionName => `app/lists/${actionName}`;
+const createActionName = actionName => `app/card/${actionName}`;
 const ADD_CARD = createActionName('ADD_CARD');
 const TOGGLE_CARD_FAVORITE = createActionName('TOGGLE_CARD_FAVORITE');
 const DELETE_CARD = createActionName('DELETE_CARD')

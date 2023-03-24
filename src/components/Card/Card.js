@@ -17,7 +17,7 @@ const Card = props => {
         dispatch(deleteCard(props.id));
     }
 
-    return <li className={clsx(styles.card, props.isFavorite && styles.isFavorite)}>{props.title}<span><span onClick={toggleFavorite} className={styles.icon + ' fa fa-star-o'}></span><span onClick={deleteItem} className={styles.icon + ' fa fa-trash-o'}></span></span></li>
+    return <li className={clsx(styles.card, props.isFavorite && styles.isFavorite)}>{props.title}<span><span onClick={toggleFavorite} className={styles.icon + ' fa fa-star-o ' + styles.favorite}></span><span onClick={deleteItem} className={styles.icon + ' fa fa-trash-o'}></span></span></li>
 }
 
 export default Card;
